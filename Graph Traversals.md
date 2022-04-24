@@ -9,7 +9,7 @@
 
 그래프 탐색에는 두가지 방법이 있다.
 
-- [DFS(depth-first search)](https://github.com/leegwae/algorithms/blob/main/DFS.md): ``깊이 우선 탐색`
+- [DFS(depth-first search)](https://github.com/leegwae/algorithms/blob/main/DFS.md): `깊이 우선 탐색`
 - BFS(breadth-first search): `너비 우선 탐색`
 
 
