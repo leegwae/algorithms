@@ -121,17 +121,15 @@ visited = [0] * 7
 
 def dfs(start_v):
     stack = [start_v]
-    
+
     while stack:
         cur = stack.pop()
-        
-        if visited[cur] == 0:
-            visited[cur] = 1
-            # print(cur)
-            
-            for w in graph[cur]:
-                if visited[w] == 0:
-                    stack.push(w)
+        visited[cur] = 1
+        # print(cur)
+
+        for w in graph[cur]:
+            if visited[w] == 0:
+                stack.append(w)
 ```
 
 - `[0, 2, 5, 1, 4, 3, 6]`순으로 방문할 것이다.
@@ -146,6 +144,52 @@ def dfs(start_v):
 - 한편, 재귀를 이용한 구현에서 `graph[v]`의 요소들은 인덱스 순서대로 접근되어 해당 정점에서 탐색을 시작한다.
 
 위 그림을 예시로 들자면 `0->1`로 가느냐(재귀 구현) `0->2`로 가느냐(스택 구현)의 차이가 있겠다.
+
+
+
+### 언제 `visited[w]`를 확인할까?
+
+DFS는 `재귀`와 `스택(반복)` 구현 외에도 인접 정점 `w`의 방문 여부를 나타내는 `visited[w]`를 확인하는 시점으로 구현 방법을 구분해볼 수 있다.
+
+1. 확인하고 호출하기: 방문하지 않았다면 `dfs(w)`를 호출하기
+2. 호출하고 확인하기: `dfs(w)`를 호출하고 방문했다면 리턴하기
+
+문제에 따라 `1번`을 적용하는 것이 편할 수도, `2번`을 적용하는 것이 편할 수도 있다. 위 [재귀로 구현하기](https://github.com/leegwae/algorithms/blob/main/DFS.md#%EC%9E%AC%EA%B7%80%EB%A1%9C-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0)와 [스택으로 구현하기](https://github.com/leegwae/algorithms/blob/main/DFS.md#%EC%8A%A4%ED%83%9D%EC%9C%BC%EB%A1%9C-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0)는 `1번`의 방법을 따랐다. 아래는 `2번`으로 구현한 DFS이다.
+
+
+
+#### 재귀로 구현하기
+
+```python
+def dfs(v):
+    if visited[v] == 1:
+        return
+    
+    visited[v] = 1
+    # print(v)
+
+    for w in graph[v]:
+        dfs(w)
+```
+
+
+
+#### 스택으로 구현하기
+
+```python
+def dfs(start_v):
+    stack = [start_v]
+    
+    while stack:
+        cur = stack.pop()
+        
+        if visited[cur] == 0:
+            visited[cur] = 1
+            # print(cur)
+            
+            for w in graph[cur]:
+                stack.append(w)
+```
 
 
 
@@ -213,3 +257,8 @@ print(count)
 ```
 
 - `2`가 출력될 것이다.
+
+
+
+[예: 유기농 배추](https://github.com/leegwae/problem-solving/blob/main/dfs/%EC%9C%A0%EA%B8%B0%EB%86%8D_%EB%B0%B0%EC%B6%94_2.py)
+
