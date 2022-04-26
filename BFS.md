@@ -83,7 +83,7 @@ bfs(0)
 
 ## 비연결 그래프에서 BFS
 
-[비연결 그래프에서 BFS](https://github.com/leegwae/algorithms/blob/main/DFS.md#%EB%B9%84%EC%97%B0%EA%B2%B0-%EA%B7%B8%EB%9E%98%ED%94%84%EC%97%90%EC%84%9C-dfs)와 같다.
+[비연결 그래프에서 DFS](https://github.com/leegwae/algorithms/blob/main/DFS.md#%EB%B9%84%EC%97%B0%EA%B2%B0-%EA%B7%B8%EB%9E%98%ED%94%84%EC%97%90%EC%84%9C-dfs)와 같다.
 
 
 

@@ -261,4 +261,3 @@ print(count)
 
 
 [예: 유기농 배추](https://github.com/leegwae/problem-solving/blob/main/dfs/%EC%9C%A0%EA%B8%B0%EB%86%8D_%EB%B0%B0%EC%B6%94_2.py)
-
