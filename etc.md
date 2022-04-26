@@ -43,3 +43,30 @@ import sys
 realine = sys.stdin.readline
 ```
 
+
+
+## queue 대신 deque 사용하기
+
+- 자료구조 `큐`의 `pop()` 연산은 파이썬의 리스트 `pop(0)` 연산으로 구현된다.
+
+```python
+queue = [1, 2, 3, 4, 5]
+item = queue.pop(0)
+```
+
+이 `pop(k)` 연산은 `O(N)`의 시간복잡도를 가진다. 
+
+- 큐의 양쪽에서 삽입, 삭제 연산을 지원하는 자료구조 `collections.deque`의 `popleft()` 연산은 `O(1)`의 시간복잡도를 가진다.
+
+```python
+from collections import deque
+queue = deque([1, 2, 3, 4, 5])
+item = queue.popleft()
+```
+
+따라서 `큐`의 연산을 사용할 일이 있다면 `collections.deque`를 사용하도록 한다.
+
+
+
+[E10. Deque](https://github.com/leegwae/python-dojang/blob/main/E10.%20Deque.md) 참고
+
