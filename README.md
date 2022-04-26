@@ -8,6 +8,7 @@
 - [구간 합](https://github.com/leegwae/algorithms/blob/main/Prefix%20Sum.md)
 - [그래프 순회](https://github.com/leegwae/algorithms/blob/main/Graph%20Traversals.md)
   - [DFS](https://github.com/leegwae/algorithms/blob/main/DFS.md)
+  - [BFS](https://github.com/leegwae/algorithms/blob/main/BFS.md)
 
 
 
