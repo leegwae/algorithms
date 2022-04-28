@@ -109,3 +109,5 @@ for w in graph[cur]:
 
 [예: 촌수계산](https://github.com/leegwae/problem-solving/blob/main/bfs/%EC%B4%8C%EC%88%98%EA%B3%84%EC%82%B0.py)
 
+[예: 미로탐색](https://github.com/leegwae/problem-solving/blob/main/graph/bfs/%EB%AF%B8%EB%A1%9C_%ED%83%90%EC%83%89.py)
+
