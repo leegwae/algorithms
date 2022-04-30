@@ -261,3 +261,53 @@ print(count)
 
 
 [예: 유기농 배추](https://github.com/leegwae/problem-solving/blob/main/dfs/%EC%9C%A0%EA%B8%B0%EB%86%8D_%EB%B0%B0%EC%B6%94_2.py)
+
+
+
+## 사이클과 DFS
+
+<img src="https://user-images.githubusercontent.com/57662010/165721791-a7fa8853-d7e7-49f6-9689-c605542ce7df.jpg" alt="cycle graph" width="40%" />
+
+위 그래프는 `순환 그래프`로, `2, 3, 4`가 사이클에 속한다. 주어진 정점 `v`가 사이클에 속하는지 알려면 `visited[v] == 1`만으로는 충분하지 않다. 
+
+정점 `v`의 인접 정점에서 DFS를 모두 마치고 돌아왔을 때 `finished[v] = 1`로 표시한다고 하자.
+
+```python
+def dfs(v):
+	visited[v] = 1
+
+	for w in graph[v]:
+		if visited[w] == 0:
+			dfs(w)
+
+	finished[v] = 1
+```
+
+`visited[v] == 1` 이면서 `finished[v] == 0`은 무슨 뜻일까? 그것은 `v`의 인접 정점에서 DFS로 탐색을 하던 중, 현재 방문한 정점 `w`의 인접 정점이 `v`였다는 뜻이다. 곧, `v`와 `w`가 사이클을 이루고 있음을 의미한다.
+
+
+
+### 사이클에 속하는 요소 알아보기
+
+```python
+visited = []
+
+def dfs(v):
+	visited[v] = 1
+
+	for w in graph[v]:
+		if w not in visited:
+			dfs(w)
+        else:
+            if finished[w] == 0:
+                print(visited[visited.index(w):])
+
+	finished[v] = 1
+```
+
+`visited`에 방문한 정점을 차례대로 넣는다고 하자. 현재 방문 정점이 `v`인데 `w in visited`이고 `finished[w] == 0`라면 `v`와 `w`는 사이클을 이루고 있다. 그렇다면 `w`에서 `v`까지 오는 동안 지나왔던 정점들은 모두 사이클에 속한다. `visited`의 상태는 `[..., w, ..., v]`이므로, `visited[visited.index(w):]`로 해당 사이클에 속하는 요소를 모두 알 수 있다.
+
+
+
+[예: 텀 프로젝트](https://github.com/leegwae/problem-solving/blob/main/graph/dfs/%ED%85%80_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8.py)
+
