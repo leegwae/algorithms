@@ -5,10 +5,13 @@
 
 
 
+- [etc: 파이썬으로 알고리즘 풀 때](https://github.com/leegwae/algorithms/blob/main/etc.md)
 - [구간 합](https://github.com/leegwae/algorithms/blob/main/Prefix%20Sum.md)
 - [그래프 순회](https://github.com/leegwae/algorithms/blob/main/Graph%20Traversals.md)
   - [DFS](https://github.com/leegwae/algorithms/blob/main/DFS.md)
   - [BFS](https://github.com/leegwae/algorithms/blob/main/BFS.md)
+- [브루트포스](https://github.com/leegwae/algorithms/blob/main/Brute-force%20Search.md)
+- [비트마스킹](https://github.com/leegwae/algorithms/blob/main/Bit%20Masking.md)
 
 
 
