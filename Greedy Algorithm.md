@@ -1,6 +1,6 @@
 # Greedy Algorithm
 
-탐욕법(Greedy Algorithm)의 패러다임은 다음과 같이 볼 수 있다.
+**탐욕법(Greedy Algorithm)**의 패러다임은 다음과 같이 볼 수 있다.
 
 1. 문제를 여러 개의 부분 문제로 나눈다.
 2. 각 문제를 풀 때마다 당장 최선의 결과를 선택한다.
