@@ -76,10 +76,10 @@ def fractional_knapsack():
         if n >= k:
             result += c
             n -= k
+            i += 1
         else:
             result += cpk * n
             break
-		cur += 1
         
     return result
 ```
@@ -95,4 +95,12 @@ def fractional_knapsack():
 한편, 동전들이 서로 배수 관계가 아니라면 동적 계획법을 적용해야한다.
 
 [동전 1.py](https://github.com/leegwae/problem-solving/blob/main/greedy/%EB%8F%99%EC%A0%84%201.py)
+
+
+
+### 기타: 정렬과 우선순위 큐의 사용
+
+대개 탐욕법 문제들은 정렬을 사용하여 `최소...` 혹은 `최대...`를 구하는 문제이다. 단, 정렬의 시간복잡도가 커서 시간 초과가 발생한다면 우선순위 큐 자료구조를 사용하여 `O(logn)`의 시간 복잡도로 삽입, 삭제 연산을 수행할 수 있다.
+
+[예: 카드_정렬하기.py](https://github.com/leegwae/problem-solving/blob/main/greedy/%EC%B9%B4%EB%93%9C_%EC%A0%95%EB%A0%AC%ED%95%98%EA%B8%B0.py)
 
