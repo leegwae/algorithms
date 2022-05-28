@@ -289,3 +289,24 @@ if __name__ == "__main__":
     print(f(N))
 ```
 
+
+
+## 동적 계획법으로 풀 수 있는 문제들
+
+### 예: 0-1 배낭 문제
+
+> 배낭에 최대 `n`(kg)만큼 넣을 수 있다. 각 물건마다 `k`(kg)의 무게와 `w`의 가치가 주어지며, 물건은 쪼갤 수 없다. (가령, 4kg의 벽돌은 1kg의 벽돌 4개로 쪼갤 수 없다.)
+
+**0-1 배낭 문제(0-1 Knapsack Problem)**은 배낭 문제 중 짐을 쪼갤 수 없는 경우를 의미한다. 이 문제는 동적 계획법으로 풀 수 있다.
+
+[예: 평범한_배낭.py](https://github.com/leegwae/problem-solving/blob/main/dp/%ED%8F%89%EB%B2%94%ED%95%9C_%EB%B0%B0%EB%82%AD.py)
+
+
+
+### 예: 동전 문제
+
+> 동전이 `n` 종류 주어진다. `k`원을 만들기 위해 필요한 최소한의 동전 개수는 몇 개인가?
+
+0-1 배낭 문제에서처럼 모든 동전을 넣어보며 최선의 결과를 도출한다.
+
+[예: 동전 2.py](https://github.com/leegwae/problem-solving/blob/main/dp/%EB%8F%99%EC%A0%84%202.py)
