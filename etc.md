@@ -47,7 +47,7 @@ list(inputStr.rstrip())	# ['1', '2', '3']
 ```python
 import sys
 
-realine = sys.stdin.readline
+readline = sys.stdin.readline
 ```
 
 

@@ -1,6 +1,6 @@
-# Two Pointer Algorithm, Sliding Window
+# Two Pointer Algorithm
 
-- **투 포인터(two pointer)** 알고리즘은 일차원 배열에서 요소를 가리키는 두 개의 포인터를 사용한다. 
+- **투 포인터(two pointer)** 알고리즘은 일차원 배열에서 요소를 가리키는 두 개의 포인터를 사용하여, 두 포인터 사이의 구간이 문제의 조건을 만족할 때까지 포인터를 움직인다.
 
 
 
