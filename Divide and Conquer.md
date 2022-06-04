@@ -126,6 +126,48 @@ def power(x, n):
 >
 > 형태의 영상이 있다면 `(0(0011)(0(0111)01)1)`로 압축된다.
 
+
+
+1. `분할`
+
+<img src="https://user-images.githubusercontent.com/57662010/172005894-9b5f9fbd-1464-45b7-aa94-ed8e5110a4c1.jpg" alt="quad_tree" width="50%;" />
+
+가로와 세로가 `n`인 영상 `M`의 압축 결과인 `f(y, x, n)`은 네 개의 영상 `m1`, `m2`, `m3`, `m4`의 압축 결과로 나누어볼 수 있다.
+
+```
+f(y, x, n) = {
+	0, (m1 = m2 = m3 = m4 이고 그 압축 결과가 0인 경우),
+	1, (m1 = m2 = m3 = m4 이고 그 압축 결과가 1인 경우),
+	(m1 + m2 + m3 + m4), (그 외의 경우)
+}
+```
+
+2. `정복`: 가로와 세로의 길이가 `1`인 영상 `M`의 압축 결과는 해당 칸에 적힌 숫자 그대로이다.
+
+```python
+if n == 1:
+	return M[y][x]
+```
+
+3. `병합`
+
+```python
+def compress(y, x, n):
+	if n == 1:
+		return M[y][x]
+
+	nn = n // 2
+	m1 = compress(y, x, nn)
+	m2 = compress(y, x + nn, nn)
+	m3 = compress(y + nn, x, nn)
+	m4 = compress(y + nn, x + nn, nn)
+
+	if m1 == m2 == m3 == m4 and len(m1) == 1:
+		return m1
+
+	return f'({m1 + m2 + m3 + m4})'
+```
+
 [쿼드_트리.py](https://github.com/leegwae/problem-solving/blob/main/divide_and_conquer/%EC%BF%BC%EB%93%9C_%ED%8A%B8%EB%A6%AC.py)
 
 
