@@ -14,6 +14,8 @@
 - [비트마스킹](https://github.com/leegwae/algorithms/blob/main/Bit%20Masking.md)
 - [다이나믹 프로그래밍](https://github.com/leegwae/algorithms/blob/main/Dynamic%20Programming.md)
 - [그리디 알고리즘](https://github.com/leegwae/algorithms/blob/main/Greedy%20Algorithm.md)
+- [투 포인터 알고리즘](https://github.com/leegwae/algorithms/blob/main/Two%20Pointer%20Algorithm.md)
+- [분할 정복](https://github.com/leegwae/algorithms/blob/main/Divide%20and%20Conquer.md)
 
 
 
@@ -23,6 +25,7 @@
 - [x] DFS
   - [x] 순환 그래프에서 DFS 추가하기
 - [ ] 그리디 알고리즘, 분할 정복, 다이나믹 프로그래밍의 차이 정리하기
+- [ ] 이분 탐색
 
 
 
