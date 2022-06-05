@@ -44,7 +44,12 @@ def f(x):
 
 - 병합 정렬
 - 퀵 정렬
-- 이분 탐색
+
+
+
+### 예: 이진 탐색
+
+[이진 탐색](https://github.com/leegwae/algorithms/blob/main/Binary%20Search.md) 참고
 
 
 
