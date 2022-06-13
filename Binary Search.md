@@ -23,6 +23,8 @@
 
 ## 이진 탐색의 구현
 
+[binary_search.py](https://github.com/leegwae/problem-solving/blob/main/binary_search/binary_search.py)
+
 ### 재귀
 
 ```python
