@@ -86,7 +86,7 @@ for nxt in range(cur + 1, len(A)):
 
 
 
-### 전체 코드
+#### 전체 코드
 
 ```python
 def f(A):
@@ -118,9 +118,8 @@ def f(A):
 [출처- LIS의 길이를 구하는 3가지 알고리즘](https://shoark7.github.io/programming/algorithm/3-LIS-algorithms#4b)
 
 ```python
-# N: 수열의 길이
 # A: 주어진 수열
-
+# N: 수열 A의 길이
 
 def f(cur):
     if dp[cur] != -1:
@@ -156,8 +155,8 @@ print(answer)
 ### bottom-up
 
 ```python
-# N: 수열의 길이
 # A: 주어진 수열
+# N: 수열 A의 길이
 
 def f(n):
 	for cur in range(1, n):
@@ -182,6 +181,46 @@ print(answer)
 
 
 [예: 가장\_긴\_증가하는\_부분\_수열.py](https://github.com/leegwae/problem-solving/blob/main/LIS/%EA%B0%80%EC%9E%A5_%EA%B8%B4_%EC%A6%9D%EA%B0%80%ED%95%98%EB%8A%94_%EB%B6%80%EB%B6%84_%EC%88%98%EC%97%B4.py)
+
+
+
+### 이진 탐색으로 LIS의 길이 구하기
+
+1. `M`은 그 요소가 오름차순으로 유지되는 배열이다.
+2. 수열 `A`의 각각의 요소 `A[cur]`에 대하여
+   1. `이진 탐색`으로 `M`에 `A[cur]`이 삽입될 위치 `pos`를 구한다.
+   2. `pos`가 `M`의 길이와 같다면 `M`에 `A[cur]`를 맨 뒤에 삽입한다.
+   3. `pos`와 `M`의 길이와 같지 않다면 `M[pos]`에 `A[cur]`을 덮어씌운다.
+      - 이 때문에 `M`은 수열 `A`에 대하여 LIS와 같진 않다.
+      - `A = [4, 5, 6, 1, 2]`라고 하자. `for`문이 3번 돈 후에는 `M = [4, 5, 6]`와 같다. `for`문이 끝까지 돌고 나면 `M = [1, 2, 6]`이다. 이처럼 먼저 LIS에 해당하는 부분 수열이 `M`에 저장된 후 다른 값으로 덮어씌워져도 LIS의 길이는 유효하다.
+
+3. `M`의 길이는 수열 `A`에 대하여 LIS의 길이와 같다.
+
+```python
+# A: 주어진 수열
+# N: 수열 A의 길이
+
+def len_lis() -> int:
+	M = []
+
+	for cur in range(N):
+		pos = bisect_left(M, A[cur])
+		if len(M) == pos:
+			M.append(A[cur])
+		else:
+			M[pos] = A[cur]
+
+	return len(M)
+
+answer = len_lis()
+print(answer)
+```
+
+이 방법은 `O(NlogN)`의 시간 복잡도를 요구한다. 시간 복잡도가 `O(logN)`인 이진 탐색을 `N`번 수행하기 때문이다.
+
+
+
+[예: 가장\_긴\_증가하는_부분\_수열\_2.py](https://github.com/leegwae/problem-solving/blob/main/LIS/%EA%B0%80%EC%9E%A5_%EA%B8%B4_%EC%A6%9D%EA%B0%80%ED%95%98%EB%8A%94_%EB%B6%80%EB%B6%84_%EC%88%98%EC%97%B4_2.py)
 
 
 

@@ -17,6 +17,7 @@
 - [투 포인터 알고리즘](https://github.com/leegwae/algorithms/blob/main/Two%20Pointer%20Algorithm.md)
 - [분할 정복](https://github.com/leegwae/algorithms/blob/main/Divide%20and%20Conquer.md)
 - [이진 탐색](https://github.com/leegwae/algorithms/blob/main/Binary%20Search.md)
+- [LIS](https://github.com/leegwae/algorithms/blob/main/LIS.md)
 
 
 
@@ -27,7 +28,8 @@
   - [x] 순환 그래프에서 DFS 추가하기
 - [ ] 그리디 알고리즘, 분할 정복, 다이나믹 프로그래밍의 차이 정리하기
 - [x] 이분 탐색
-- [ ] LIS-이분탐색으로 구하기
+- [x] LIS의 길이-이분탐색으로 구하기
+- [ ] 이분 탐색으로 LIS 배열 구하기
 
 
 
