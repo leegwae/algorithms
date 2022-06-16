@@ -79,7 +79,7 @@ if w in visited:	# 정점에 방문했는지 알아보기
 ```python
 visited = [0] * (정점의개수)		# visited 배열 선언하기
 visited[w] = 1					# 방문한 정점 표시하기
-if viisted[w] == 1:				# 정점에 방문했는지 알아보기
+if visited[w] == 1:				# 정점에 방문했는지 알아보기
     print(f'{w}에 이미 방문하였음')
 ```
 
@@ -123,11 +123,11 @@ def dfs(start_v):
     stack = [start_v]
 
     while stack:
-        cur = stack.pop()
-        visited[cur] = 1
-        # print(cur)
+        v = stack.pop()
+        visited[v] = 1
+        # print(v)
 
-        for w in graph[cur]:
+        for w in graph[v]:
             if visited[w] == 0:
                 stack.append(w)
 ```
@@ -229,6 +229,8 @@ def dfs(start_v):
 
 
 ```python
+# N: 그래프 내 정점의 개수
+N = 5
 graph = {
     1: [3, 2],
     2: [1],
@@ -237,7 +239,7 @@ graph = {
     5: [4]
 }
 
-visited = [0] * 6
+visited = [0] * (N + 1)
 count = 0
 
 
@@ -248,7 +250,7 @@ def dfs(v):
         if visited[w] == 0:
             dfs(w)
 
-for v in range(1, len(visited)):
+for v in range(1, N + 1):
     if visited[v] == 0:
         dfs(v)
         count += 1
@@ -270,7 +272,27 @@ print(count)
 
 위 그래프는 `순환 그래프`로, `2, 3, 4`가 사이클에 속한다. 주어진 정점 `v`가 사이클에 속하는지 알려면 `visited[v] == 1`만으로는 충분하지 않다. 
 
-정점 `v`의 인접 정점에서 DFS를 모두 마치고 돌아왔을 때 `finished[v] = 1`로 표시한다고 하자.
+정점 `v`의 인접 정점에서 DFS를 모두 마치고 돌아왔을 때 `finished[v] = 1`로 표시한다고 하자. 즉 `finished[v] == 1`이란 `v`에서부터 시작한 DFS 탐색(`dfs(v)`)이 끝이 났다는 것을 뜻한다.
+
+```python
+graph = {
+    1: [2],
+    2: [3],
+    3: [4],
+    4: [2]
+}
+
+def dfs(v):
+	visited[v] = 1
+
+	for w in graph[v]:
+		if visited[w] == 0:
+			dfs(w)
+            
+    finished[v] = 1
+```
+
+이때, `visited[w] == 1` 이면서 `finished[w] == 0`은 무슨 뜻일까? 
 
 ```python
 def dfs(v):
@@ -279,33 +301,40 @@ def dfs(v):
 	for w in graph[v]:
 		if visited[w] == 0:
 			dfs(w)
-
-	finished[v] = 1
+        else:
+            if finished[w] == 0:
+                print(f'정점 {w}는 이미 방문했으나, 정점 {w}부터 시작한 DFS가 아직 끝이 나지 않았음')
+            
+    finished[v] = 1
 ```
 
-`visited[v] == 1` 이면서 `finished[v] == 0`은 무슨 뜻일까? 그것은 `v`의 인접 정점에서 DFS로 탐색을 하던 중, 현재 방문한 정점 `w`의 인접 정점이 `v`였다는 뜻이다. 곧, `v`와 `w`가 사이클을 이루고 있음을 의미한다.
+그것은 `w`를 방문하고 DFS를 진행하던 중 방문한 정점 `v`의 인접 정점이 `w`였다는 뜻이다. 곧, `w`와 `v`는 사이클을 이루고 있다.
 
 
 
 ### 사이클에 속하는 요소 알아보기
 
+> 주의: 이 방법은 모든 정점이 단 하나의 인접 정점만을 가질 때 유효하다.
+
+방문한 정점이 인덱스가 아니라 요소가 되도록 `visited`의 구현 방식을 바꾸어야한다.
+
 ```python
 visited = []
 
 def dfs(v):
-	visited[v] = 1
+	visited.append(v)
 
-	for w in graph[v]:
-		if w not in visited:
-			dfs(w)
-        else:
-            if finished[w] == 0:
-                print(visited[visited.index(w):])
+    w = graph[v]
+    if w not in visited:
+        dfs(w)
+    else:
+        if finished[w] == 0:
+            print(visited[visited.index(w):])
 
 	finished[v] = 1
 ```
 
-`visited`에 방문한 정점을 차례대로 넣는다고 하자. 현재 방문 정점이 `v`인데 `w in visited`이고 `finished[w] == 0`라면 `v`와 `w`는 사이클을 이루고 있다. 그렇다면 `w`에서 `v`까지 오는 동안 지나왔던 정점들은 모두 사이클에 속한다. `visited`의 상태는 `[..., w, ..., v]`이므로, `visited[visited.index(w):]`로 해당 사이클에 속하는 요소를 모두 알 수 있다.
+`visited`에 방문한 정점을 차례대로 넣는다고 하자. 현재 방문 정점이 `v`이고 `v`의 인접 정점이 `w`인데 `w in visited`이고 `finished[w] == 0`라면 `v`와 `w`는 사이클을 이루고 있다. 그렇다면 `w`에서 `v`까지 오는 동안 지나왔던 정점들은 모두 사이클에 속한다. `visited`의 상태는 `[..., w, ..., v]`이므로, `visited[visited.index(w):]`로 해당 사이클에 속하는 요소를 모두 알 수 있다.
 
 
 
