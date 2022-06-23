@@ -16,6 +16,8 @@
 
 ## 병합 정렬의 구현
 
+[merge_sort.py](https://github.com/leegwae/problem-solving/blob/main/sorting/merge_sort.py)
+
 ```python
 # arr: 정렬하려는 배열
 # N: arr의 길이

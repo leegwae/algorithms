@@ -17,10 +17,11 @@
 
 ## 선택 정렬의 구현
 
+[selection_sort.py](https://github.com/leegwae/problem-solving/blob/main/sorting/selection_sort.py)
+
 ```python
 # arr: 정렬하려는 배열
 # N: arr의 길이
-
 def selection_sort():
 	for start in range(0, N - 1):
 		least = start

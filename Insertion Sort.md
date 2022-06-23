@@ -17,10 +17,11 @@
 
 ## 삽입 정렬의 구현
 
+[insertion_sort.py](https://github.com/leegwae/problem-solving/blob/main/sorting/insertion_sort.py)
+
 ```python
 # arr: 정렬하려는 배열
 # N: arr의 길이
-
 def insertion_sort():
 	for i in range(1, N):
 		key = arr[i]
