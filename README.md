@@ -3,6 +3,8 @@
 
 (2022/04/20~)
 
+`예: 문제_이름.py`는 백준 문제 풀이입니다. 코드 링크가 잘못된 링크로 연결될 경우 [이 레포지토리](https://github.com/leegwae/problem-solving)에서 찾아주세요. 
+
 
 
 - [etc: 파이썬으로 알고리즘 풀 때](https://github.com/leegwae/algorithms/blob/main/etc.md)
@@ -23,7 +25,8 @@
   - [삽입 정렬](https://github.com/leegwae/algorithms/blob/main/Insertion%20Sort.md)
   - [버블 정렬](https://github.com/leegwae/algorithms/blob/main/Bubble%20Sort.md)
   - [합병 정렬](https://github.com/leegwae/algorithms/blob/main/Merge%20Sort.md)
-
+- [최단 경로 알고리즘](https://github.com/leegwae/algorithms/blob/main/Shortest%20Path%20Algorithms.md)
+  - [다익스트라 알고리즘](https://github.com/leegwae/algorithms/blob/main/Dijkstra%20Algorithm.md)
 
 
 
@@ -41,6 +44,10 @@
 - [ ] 이분 탐색으로 LIS 배열 구하기
 - [ ] Sorting Algorithms
   - [ ] Quick Sort
+- [ ] 최단 경로 알고리즘
+  - [ ] 벨만 포드
+  - [ ] 플로이드
+
 
 
 
