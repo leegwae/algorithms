@@ -42,8 +42,13 @@ def f(x):
 
 ## 분할 정복으로 풀 수 있는 문제들
 
-- 병합 정렬
 - 퀵 정렬
+
+
+
+### 예: 병합 정렬
+
+[병합 정렬](https://github.com/leegwae/algorithms/blob/main/Divide%20and%20Conquer.md) 참고
 
 
 

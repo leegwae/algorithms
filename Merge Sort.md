@@ -1,6 +1,6 @@
 # Merge Sort
 
-- **병합 정렬(Merge Sort)**: 분할 정복 기법을 사용하여, 정렬하려는 배열을 두 개의 배열로 나눈 후 다시 합치며 정렬하는 알고리즘이다.
+- **병합 정렬(Merge Sort)**: [분할 정복 기법](https://github.com/leegwae/algorithms/blob/main/Divide%20and%20Conquer.md)을 사용하여, 정렬하려는 배열을 두 개의 배열로 나눈 후 다시 합치며 정렬하는 알고리즘이다.
 
 
 

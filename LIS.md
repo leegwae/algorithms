@@ -65,7 +65,7 @@ def f(A):
     result = 1
 	for cur in range(len(A)):
 		s = A[cur + 1:]에서 A[cur]보다 큰 요소들만 모은 부분 수열
-        result = max(result, 1 + f(s))
+		result = max(result, 1 + f(s))
         
     return result
 ```

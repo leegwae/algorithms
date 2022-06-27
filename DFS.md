@@ -301,9 +301,9 @@ def dfs(v):
 	for w in graph[v]:
 		if visited[w] == 0:
 			dfs(w)
-        else:
-            if finished[w] == 0:
-                print(f'정점 {w}는 이미 방문했으나, 정점 {w}부터 시작한 DFS가 아직 끝이 나지 않았음')
+		else:
+			if finished[w] == 0:
+				print(f'정점 {w}는 이미 방문했으나, 정점 {w}부터 시작한 DFS가 아직 끝이 나지 않았음')
             
     finished[v] = 1
 ```
