@@ -191,7 +191,7 @@ bfs(root)	# level[root] = 1
 print(level)# level[i] = 노드 i의 레벨 (1부터 시작)
 ```
 
-이 경우 루트의 레벨이 `0`이 아니라 `1`부터 시작한다. 상황에 따라 사용하도록 한다.
+이 경우 루트의 레벨이 `0`이 아니라 `1`부터 시작한다. `0`부터 시작하게 하고 싶다면 `level` 배열의 요소들은 절대 나올 수 없는 임의의 수(음수나 아주 큰 수) `x`로 초기화하고 `level[root]`는 `0`으로 초기화한 후, `level[nxt] == x`로 방문했는지(거리를 계산했는지)를 알 수 있다. 상황에 따라 사용하도록 한다.
 
 
 
@@ -217,3 +217,4 @@ BFS로 <u>가중치가 없는 그래프</u>에서 두 노드 사이의 최단거
 
 [예: 미로_탐색.py](https://github.com/leegwae/problem-solving/blob/main/graph/bfs/%EB%AF%B8%EB%A1%9C_%ED%83%90%EC%83%89.py)
 
+[예: 아기_상어.py](https://github.com/leegwae/problem-solving/blob/main/graph/bfs/%EC%95%84%EA%B8%B0_%EC%83%81%EC%96%B4.py)
