@@ -28,7 +28,7 @@
 - [최단 경로 알고리즘](https://github.com/leegwae/algorithms/blob/main/Shortest%20Path%20Algorithms.md)
   - [다익스트라 알고리즘](https://github.com/leegwae/algorithms/blob/main/Dijkstra%20Algorithm.md)
 - [에라토스테네스의 체](https://github.com/leegwae/algorithms/blob/main/Sieve%20of%20Eratosthenes.md)
-
+- [위상 정렬](https://github.com/leegwae/algorithms/blob/main/Topological%20Sorting.md)
 
 
 
@@ -36,17 +36,16 @@
 
 - [ ] DFS
   - [x] 순환 그래프에서 DFS 추가하기
-  - [ ] 위상 정렬
+  - [x] 위상 정렬
   - [ ] 오일러 순회
 - [ ] 그리디 알고리즘, 분할 정복, 다이나믹 프로그래밍의 차이 정리하기
 - [x] 이분 탐색
 - [x] LIS의 길이-이분탐색으로 구하기
 - [ ] Divide and Conquer
   - [ ] 퀵 정렬, 병합 정렬 링크
-
 - [ ] 이분 탐색으로 LIS 배열 구하기
 - [ ] Sorting Algorithms
-  - [ ] Quick Sort 보충하기ㅅ
+  - [ ] Quick Sort 보충하기
 - [ ] 최단 경로 알고리즘
   - [ ] 벨만 포드
   - [ ] 플로이드

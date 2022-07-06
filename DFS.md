@@ -340,3 +340,12 @@ def dfs(v):
 
 [예: 텀 프로젝트](https://github.com/leegwae/problem-solving/blob/main/graph/dfs/%ED%85%80_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8.py)
 
+
+
+### 위상 정렬
+
+**위상 정렬(topological sorting)**이란 의존 관계가 있는 정점들을 순서에 맞게 나열하는 것을 의미한다. 이것은 DAG(directed acylic graph)를 DFS하며 DFS가 끝난 순서대로 정점을 나열한 것과 같다.
+
+
+
+[알고리즘 위상 정렬 정리](https://github.com/leegwae/algorithms/blob/main/Topological%20Sorting.md) 참고
