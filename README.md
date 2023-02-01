@@ -1,7 +1,9 @@
 # algorithms
 내가 공부한 알고리즘
 
-(2022/04/20~)
+(2022/04/20~2022/07/06)
+
+(2022/12/29~)
 
 `예: 문제_이름.py`는 백준 문제 풀이입니다. 코드 링크가 잘못된 링크로 연결될 경우 [이 레포지토리](https://github.com/leegwae/problem-solving)에서 찾아주세요. 
 
@@ -29,6 +31,7 @@
   - [다익스트라 알고리즘](https://github.com/leegwae/algorithms/blob/main/Dijkstra%20Algorithm.md)
 - [에라토스테네스의 체](https://github.com/leegwae/algorithms/blob/main/Sieve%20of%20Eratosthenes.md)
 - [위상 정렬](https://github.com/leegwae/algorithms/blob/main/Topological%20Sorting.md)
+- [최소 스패닝 트리](https://github.com/leegwae/algorithms/blob/main/Minimum%20Spanning%20Tree.md)
 
 
 
