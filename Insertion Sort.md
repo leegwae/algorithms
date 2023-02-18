@@ -8,10 +8,9 @@
 
 오름차순을 기준으로 한다.
 
-1. 현재 인덱스 `i` (` i >= 1`)에 대하여 `arr[i]`를 저장한다.
-2. 저장한 값을 인덱스 `i` 이전의 요소들 `arr[p]` (`p < i`)과 비교하여, 저장한 값이 더 작다면 `arr[p]`를 한칸씩 뒤로 당긴다.
-3. 저장한 값이 크다면 `arr[p + 1]`에 할당한다.
-4. 현재 인덱스 `i`가 `n`이 될 때까지 반복
+1. 현재 위치(`i >= 1`)의 요소를 저장한다.
+2. 현재 위치의 이전 요소들을 역순으로 검사하여 저장한 값보다 크다면 한 칸 씩 뒤로 옮긴다.
+3. 저장한 값을 빈 칸에 삽입한다.
 
 
 
@@ -20,17 +19,18 @@
 [insertion_sort.py](https://github.com/leegwae/problem-solving/blob/main/sorting/insertion_sort.py)
 
 ```python
-# arr: 정렬하려는 배열
-# N: arr의 길이
-def insertion_sort():
-	for i in range(1, N):
-		key = arr[i]
-		prev = i - 1
-		while prev >= 0 and arr[prev] > key:
-			arr[prev + 1] = arr[prev]
-			prev -= 1
-		arr[prev + 1] = key
+def insertion_sort(arr):
+    N = len(arr)
+    for i in range(1, N):
+        val = arr[i]
+        prev = i - 1
+        while prev >= 0 and arr[prev] > val:
+            arr[prev + 1] = arr[prev]
+            prev -= 1
+        arr[prev + 1] = val
 ```
+
+`arr[prev]=val`가 아니라 `arr[prev+1]=val`인 이유는 `val`보다 큰 마지막 요소를 뒤로 당겨 해당 칸이 비게 되었는데 `prev-=1`을 하여 그 앞 칸을 가리키게 되었기 때문이다.
 
 
 
@@ -44,8 +44,6 @@ def insertion_sort():
   - 비교 횟수: `O(n^2)`
   - 이동 횟수: `O(n^2)`
 - 평균의 경우는 `O(n^2)`
-
-
 
 ### 공간 복잡도
 

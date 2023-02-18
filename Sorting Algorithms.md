@@ -26,8 +26,6 @@ sorted = [10, 20, 30, 30]
 
 가령 `arr[0]`의 30을 `A`, `arr[1]`의 30을 `B`라고 할 때 정렬 후 `A - B` 순이 아니라 `B - A`순으로 불필요하게 위치가 바뀔 경우 안정되지 않은 정렬이다.
 
-
-
 ### 제자리 정렬
 
 - **제자리 정렬(in-place sorting)**: 정렬하려는 배열 외에는 다른 추가 메모리가 필요하지 않는 정렬을 뜻한다.
@@ -39,9 +37,18 @@ sorted = [10, 20, 30, 30]
 - [선택 정렬(Selection Sort)]((https://github.com/leegwae/algorithms/blob/main/Selection%20Sort.md))
 - [삽입 정렬(Insertion Sort)]((https://github.com/leegwae/algorithms/blob/main/Insertion%20Sort.md))
 - [버블 정렬(Bubble Sort)]((https://github.com/leegwae/algorithms/blob/main/Bubble%20Sort.md))
-- 퀵 정렬(Quick Sort)
-- 힙 정렬(Heap Sort)
+- [퀵 정렬(Quick Sort)](https://github.com/leegwae/algorithms/blob/main/Quick%20Sort.md)
+- [힙 정렬(Heap Sort)](https://github.com/leegwae/algorithms/blob/main/Heap%20Sort.md)
 - [합병 정렬(Merge Sort)]((https://github.com/leegwae/algorithms/blob/main/Merge%20Sort.md))
+
+| 정렬 알고리즘 | 안정 정렬   | 제자리 정렬      |
+| ------------- | ----------- | ---------------- |
+| 선택 정렬     | 불안정 정렬 | 제자리 정렬      |
+| 삽입 정렬     | 안정 정렬   | 제자리 정렬      |
+| 버블 정렬     | 안정 정렬   | 제자리 정렬      |
+| 퀵 정렬       | 불안정 정렬 | 제자리 정렬      |
+| 힙 정렬       | 불안정 정렬 | 제자리 정렬      |
+| 병합 정렬     | 안정 정렬   | 제자리 정렬 아님 |
 
 
 

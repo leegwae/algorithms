@@ -16,12 +16,12 @@
 
 ## 병합 정렬의 구현
 
+병합할 때 **두 부분 배열은 정렬된 상태**라고 가정한다. 따라서 정렬된 두 배열을 합치는 것은 각각의 원소를 차례대로 비교해가며 나열하면 된다.
+
 [merge_sort.py](https://github.com/leegwae/problem-solving/blob/main/sorting/merge_sort.py)
 
 ```python
-# arr: 정렬하려는 배열
-# N: arr의 길이
-def merge_sort(left: int, right: int) -> None:
+def merge_sort(left: int, right: int):
 	if left >= right:
 		return
 
@@ -30,8 +30,7 @@ def merge_sort(left: int, right: int) -> None:
 	merge_sort(middle + 1, right)
 	merge(left, middle, right)
 
-
-def merge(left: int, middle: int, right: int) -> None:
+def merge(left: int, middle: int, right: int):
 	i = left
 	j = middle + 1
 	k = left
@@ -60,6 +59,7 @@ def merge(left: int, middle: int, right: int) -> None:
 		arr[i] = sorted[i]
         
 
+N = len(arr)
 merge_sort(0, N - 1)
 ```
 
@@ -69,26 +69,25 @@ merge_sort(0, N - 1)
 
 ### 시간 복잡도
 
-시간 복잡도는 모든 경우에서 `O(nlogn)`이다.
-
-
+배열을 항상 반으로 나누기 때문에 시간 복잡도는 모든 경우에서 `O(nlogn)`이다.
 
 ### 공간 복잡도
 
-정렬하려는 배열 크기 만큼의 배열을 사용해야하므로 공간 복잡도는 `O(n)`이다.
+정렬하려는 배열 크기만큼의 배열을 사용해야하므로 공간 복잡도는 `O(n)`이다.
 
 
 
 ## 합병 정렬의 특징
 
-### 장점
+- 장점
 
-- 안정 정렬이다.
-- 크기가 큰 연결 리스트를 합병 정렬할 때, 연결하는 링크만 변경하면 되므로 매우 효율적이다.
+  - 안정 정렬이다.
+
+  - 크기가 큰 연결 리스트를 합병 정렬할 때, 연결하는 링크만 변경하면 되므로 매우 효율적이다.
 
 
+- 단점
 
-### 단점
+  - 제자리 정렬이 아니다.
 
-- 제자리 정렬이 아니다: 배열 크기만큼의 메모리를 필요로 한다.
-- 배열의 크기가 크다면 이동 횟수와 필요로 하는 메모리가 커져 비효율적이다.
+  - 배열의 크기가 크다면 이동 횟수와 필요로 하는 메모리가 커져 비효율적이다.

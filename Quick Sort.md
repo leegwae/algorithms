@@ -12,76 +12,127 @@
 2. `정복`: 각각의 `부분 배열`을 정렬한다.
 3. `병합`: `부분 배열`들을 하나의 배열로 병합한다.
 
+```python
+def quick_sort(left, right):
+	if left < right:
+		pivot_idx = partition(left, right)
+		quick_sort(left, pivot_idx - 1)
+		quick_sort(pivot_idx + 1, right)
+```
+
 
 
 ## 퀵 정렬의 구현
 
-### 분할하기
+퀵 정렬에서 **분할과 정렬**을 구현하는 방법은 여러 가지이다.
 
-어떻게 `피벗`을 구하여 두 개의 배열로 분할할까?
+1. 피벗 선택하기: 가장 왼쪽의 요소, 가장 오른쪽의 요소, 혹은 가운데 요소를 피벗으로 선택한다.
+2. 요소 옮기기: 기본적인 아이디어는 피벗을 기준으로 왼쪽에 피벗보다 작은 요소들을, 오른쪽에 피벗보다 큰 요소들을 모으는 것이다. 두 가지 방법이 있다.
+   1. 가장 왼쪽의 요소가 피벗으로 선택되었다면 피벗보다 큰 요소를 배열의 오른쪽에 모은다. 가장 오른쪽의 요소가 피벗으로 선택되었다면 피벗보다 작은 요소를 배열의 왼쪽에 모은다. 마지막으로 피벗을 기준으로 나누어지도록 피벗을 옮긴다.
+   2. 피벗을 기준으로 탐색하지 않은 요소 중 가장 작은 요소와 큰 요소를 택하여 swap한다. 마지막으로 피벗을 기준으로 나누어지도록 피벗을 옮긴다.
+
+### 첫번째 방법
 
 1. 배열의 마지막 요소를 `피벗`으로 정한다.
-2. 배열에서 가장 큰 요소를 찾는다.
-3. 배열에서 가장 큰 요소와 배열의 마지막 요소를 교환한다.
+2. `피벗`을 제외한 요소들 중 `피벗` 보다 작은 요소는 왼쪽으로 모은다.
+3. `피벗`을 `피벗`보다 작은 요소들 옆으로 옮겨 `피벗`을 기준으로 작은 요소들과 큰 요소들로 나누어지도록 한다.
 
 ```python
-def partition(left: int, right: int) -> int:
+def partition(left, right):
 	pivot = arr[right]
-	i = left - 1
-	for j in range(left, right):
-		if arr[j] <= pivot:
-			i = i + 1
-			arr[i], arr[j] = arr[j], arr[i]
+	pos = left
+	for i in range(left, right):
+		if arr[i] <= pivot:
+			arr[pos], arr[i] = arr[i], arr[pos]
+			pos = pos + 1
 
-	arr[i + 1], arr[right] = arr[right], arr[i + 1]
-
-	return i + 1
+	arr[pos], arr[right] = arr[right], arr[pos]
+	return pos
 ```
 
+왼쪽부터 차례대로 검사하며 피벗보다 작은 요소는 swap을 사용하여 왼쪽으로 모은다. `pos`는 피벗이 들어갈 인덱스를 나타내게 된다.
 
-
-### 정복과 병합
-
-```python
-def quick_sort(left: int, right: int):
-	if left < right:
-		pivot = partition(left, right)
-		quick_sort(left, pivot - 1)
-		quick_sort(pivot + 1, right)
-```
-
-
-
-### 전체 코드
+#### 전체 코드
 
 [quick_sort.py](https://github.com/leegwae/problem-solving/blob/main/sorting/quick_sort.py)
 
 ```python
-# arr: 정렬하려는 배열
-
-def partition(left: int, right: int) -> int:
+def partition(left, right):
 	pivot = arr[right]
-	i = left - 1
-	for j in range(left, right):
-		if arr[j] <= pivot:
-			i = i + 1
-			arr[i], arr[j] = arr[j], arr[i]
+	pos = left
+	for i in range(left, right):
+		if arr[i] <= pivot:
+			arr[pos], arr[i] = arr[i], arr[pos]
+			pos = pos + 1
 
-	arr[i + 1], arr[right] = arr[right], arr[i + 1]
+	arr[pos], arr[right] = arr[right], arr[pos]
+	return pos
 
-	return i + 1
 
-def quick_sort(left: int, right: int):
+def quick_sort(left, right):
 	if left < right:
-		pivot = partition(left, right)
-		quick_sort(left, pivot - 1)
-		quick_sort(pivot + 1, right)
-        
-
-arr = []
-quick_sort(0, len(arr) - 1)
-print(arr)
+		pivot_idx = partition(left, right)
+		quick_sort(left, pivot_idx - 1)
+		quick_sort(pivot_idx + 1, right)
 ```
+
+### 두번째 방법
+
+1. 배열의 첫번째 요소를 피벗으로 정한다.
+2. 피벗을 제외한 요소들 중에서 가장 작은 요소와 가장 큰 요소를 찾고, 가장 큰 요소의 인덱스가 가장 작은 요소의 인덱스보다 작다면 둘의 위치를 바꾼다.
+3. 탐색이 끝났다면 피벗을 옮긴다.
+
+```python
+def partition(left, right):
+	low = left + 1
+	high = right
+	pivot = arr[left]
+
+	while low <= high:
+		while low <= right and arr[low] <= pivot:
+			low += 1
+		while high >= left and arr[high] > pivot:
+			high -= 1
+
+		if low <= high:
+			arr[low], arr[high] = arr[high], arr[low]
+
+	arr[left], arr[high] = arr[high], arr[left]
+	return high
+```
+
+#### 전체 코드
+
+[quick_sort.py](https://github.com/leegwae/problem-solving/blob/main/sorting/quick_sort.py)
+
+```python
+def partition(left, right):
+	low = left + 1
+	high = right
+	pivot = arr[left]
+
+	while low <= high:
+		while low <= right and arr[low] <= pivot:
+			low += 1
+		while high >= low and arr[high] > pivot:
+			high -= 1
+
+		if low <= high:
+			arr[low], arr[high] = arr[high], arr[low]
+
+	arr[left], arr[high] = arr[high], arr[left]
+	return high
+
+
+def quick_sort(left, right):
+	if left < right:
+		pivot_idx = partition(left, right)
+		quick_sort(left, pivot_idx - 1)
+		quick_sort(pivot_idx + 1, right)
+
+```
+
+
 
 
 
@@ -92,8 +143,6 @@ print(arr)
 - 최선의 경우와 평균의 경우 `O(nlogn)`이다.
 - 최악의 경우는 이미 정렬되어 있는 경우로, `O(n^2)`이다.
 
-
-
 ### 공간 복잡도
 
 두 원소의 값을 바꾸기 위해 `O(1)`의 공간 복잡도를 필요로 한다.
@@ -102,17 +151,18 @@ print(arr)
 
 ## 퀵 정렬의 특징
 
-### 장점
+- 장점
 
-- 평균적으로 가장 빠르다.
-- 제자리 정렬이다.
+  - 평균적으로 가장 빠르다.
 
+  - 제자리 정렬이다.
 
+- 단점
 
-### 단점
+  - 불안정 정렬이다.
 
-- 불안정 정렬이다.
-- 이미 정렬된 배열에 대해서 비효율적이다.
+  - 이미 정렬된 배열에 대해서 비효율적이다.
+
 
 
 

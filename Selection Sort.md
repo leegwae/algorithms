@@ -11,7 +11,7 @@
 1. 탐색 배열에서 최소값을 찾는다.
 2. 탐색 배열의 첫번째 요소와 찾은 최소값을 바꾼다.
 3. 탐색 배열에서 첫번째 요소를 제외한다.
-4. 탐색 배열의 길이가 `1`이 될 때까지 반복
+4. 탐색 배열의 길이가 `1`이 될 때까지 반복한다.
 
 
 
@@ -20,17 +20,17 @@
 [selection_sort.py](https://github.com/leegwae/problem-solving/blob/main/sorting/selection_sort.py)
 
 ```python
-# arr: 정렬하려는 배열
-# N: arr의 길이
-def selection_sort():
-	for start in range(0, N - 1):
-		least = start
-		for i in range(start + 1, N):
-			if arr[least] > arr[i]:
-				least = i
-
-		arr[start], arr[least] = arr[least], arr[start]
+def selection_sort(arr):
+    N = len(arr)
+    for i in range(0, N - 1):
+        least = i
+        for j in range(i + 1, N):
+            if arr[j] > least:
+                least = j
+        arr[i], arr[least] = arr[least], arr[i]
 ```
+
+동일한 값을 갖는 요소가 여러 개일 때, 가장 마지막 요소가 먼저 선택되어 정렬되므로 불안정 정렬이다.
 
 
 
@@ -39,8 +39,6 @@ def selection_sort():
 ### 시간 복잡도
 
 비교 횟수가 `(n - 1) + (n - 2) + ... + 1 = n(n-1) / 2`이므로 시간 복잡도는 `O(n^2)`이다.
-
-
 
 ### 공간 복잡도
 

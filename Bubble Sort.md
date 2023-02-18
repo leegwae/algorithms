@@ -19,13 +19,12 @@
 [bubble_sort.py](https://github.com/leegwae/problem-solving/blob/main/sorting/bubble_sort.py)
 
 ```python
-# arr: 정렬하려는 배열
-# N: arr의 길이
-def bubble_sort():
-	for last in range(N - 1, 0, -1):
-		for i in range(0, last):
-			if arr[i] > arr[i + 1]:
-				arr[i], arr[i + 1] = arr[i + 1], arr[i]
+def bubble_sort(arr):
+    N = len(arr)
+    for i in range(N-1, 0, -1):
+        for j in range(0, i):
+            if arr[j] > arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
 ```
 
 
@@ -47,21 +46,19 @@ arr = [1, 2, 3, 4, 5, 6]
 이제부터 `arr`는 정렬이 완료된 상태이므로, 내부 `for`문을 돌아도 `arr[i] > arr[i + 1]`을 만족하지 않아 요소의 이동은 이루어지지 않을 것이다. 즉, 내부 `for`문을 돌 동안 교환이 일어나지 않는다면 이미 정렬된 것으로 볼 수 있다.
 
 ```python
-# arr: 정렬하려는 배열
-# N: arr의 길이
-def bubble_sort():
-	for last in range(N - 1, 0, -1):
+def bubble_sort(arr):
+    N = len(arr)
+    for i in range(N-1, 0, -1):
         swapped = False
-		for i in range(0, last):
-			if arr[i] > arr[i + 1]:
-				arr[i], arr[i + 1] = arr[i + 1], arr[i]
-            	swapped = True
-                
-		if swapped == False:
+        for j in range(0, i):
+            if arr[j] > arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+                swapped = True
+        if not swapped:
             break
 ```
 
-이렇게 시간 복잡도의 하한(이미 정렬되어 있는 경우)을 `O(n)`으로 개선할 수 있다.
+교환이 일어나는지 체크하는 플래그를 두어 시간 복잡도의 하한(이미 정렬되어 있는 경우)을 `O(n)`으로 개선할 수 있다.
 
 
 
@@ -79,14 +76,10 @@ def bubble_sort():
 - 최선의 경우는 이미 정렬된 경우로 `0`번이다.
 - 평균적으로는 `O(n^2)`이다.
 
-
-
 #### 개선 후
 
 - 최선의 경우는 이미 정렬된 경우로 `O(n)`이다.
 - 최악의 경우, 평균의 경우 `O(n^2)`이다.
-
-
 
 ### 공간 복잡도
 
