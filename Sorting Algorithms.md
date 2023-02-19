@@ -34,12 +34,12 @@ sorted = [10, 20, 30, 30]
 
 ## 정렬 알고리즘의 종류
 
-- [선택 정렬(Selection Sort)]((https://github.com/leegwae/algorithms/blob/main/Selection%20Sort.md))
-- [삽입 정렬(Insertion Sort)]((https://github.com/leegwae/algorithms/blob/main/Insertion%20Sort.md))
-- [버블 정렬(Bubble Sort)]((https://github.com/leegwae/algorithms/blob/main/Bubble%20Sort.md))
+- [선택 정렬(Selection Sort)](https://github.com/leegwae/algorithms/blob/main/Selection%20Sort.md)
+- [삽입 정렬(Insertion Sort)](https://github.com/leegwae/algorithms/blob/main/Insertion%20Sort.md)
+- [버블 정렬(Bubble Sort)](https://github.com/leegwae/algorithms/blob/main/Bubble%20Sort.md)
 - [퀵 정렬(Quick Sort)](https://github.com/leegwae/algorithms/blob/main/Quick%20Sort.md)
 - [힙 정렬(Heap Sort)](https://github.com/leegwae/algorithms/blob/main/Heap%20Sort.md)
-- [합병 정렬(Merge Sort)]((https://github.com/leegwae/algorithms/blob/main/Merge%20Sort.md))
+- [합병 정렬(Merge Sort)](https://github.com/leegwae/algorithms/blob/main/Merge%20Sort.md)
 
 | 정렬 알고리즘 | 안정 정렬   | 제자리 정렬      |
 | ------------- | ----------- | ---------------- |
