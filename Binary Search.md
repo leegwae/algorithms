@@ -1,6 +1,6 @@
 # Binary Search
 
-- **이진 탐색(binary search)**은 분할과 정복 알고리즘을 사용하여 정렬된 배열에서 주어진 요소를 `O(logn)`의 시간복잡도로 검색한다.
+- **이진 탐색(binary search)**은 분할과 정복을 사용하여 정렬된 배열에서 탐색 범위를 절반으로 좁히며 주어진 요소를 탐색하는 알고리즘이다.
 
 
 
@@ -42,7 +42,7 @@ def binary_search(left, right):
 		return binary_search(middle + 1, right)
 	elif M[middle] > N:
 		return binary_search(left, middle - 1)
-
+    
 binary_search(0, len(M) - 1)
 ```
 
@@ -55,23 +55,73 @@ binary_search(0, len(M) - 1)
 # M: 탐색할 배열
 def binary_search():
 	left, right = 0, len(M) - 1
-	idx = -1
 
-	while True:
-		if left > right:
-			break
-
+	while left <= right:
 		middle = (left + right) // 2
 
 		if M[middle] == N:
-			idx = middle
-			break
-
+            return middle
+        
 		if M[middle] < N:
 			left = middle + 1
 		elif M[middle] > N:
 			right = middle - 1
 
-	return idx
+	return -1
 ```
+
+
+
+## 파이썬과 이진 탐색
+
+파이썬의 `bisect` 모듈이 이진 탐색을 지원한다.
+
+| 메서드                        | 시간 복잡도 | 설명                                                         |
+| ----------------------------- | ----------- | ------------------------------------------------------------ |
+| `bisect_left(리스트, 아이템)` | O(logn)     | 리스트에 아이템을 삽입할 때 삽입할 수 있는 가장 왼쪽 인덱스를 반환한다. |
+
+```python
+import bisect
+from typing import List
+
+def binary_search(arr: List[int], target: int) -> int:
+    idx = bisect.bisect_left(arr, target)
+    
+    if idx < len(arr) and arr[idx] == target:
+        return idx
+    else:
+        return -1
+```
+
+
+
+## 이진 탐색과 오버플로 문제
+
+```python
+middle = (left + right) // 2
+```
+
+자료형의 최댓값이 있는 언어에서,`left + right`가 이 최대값을 넘어선다면 예상치 못한 결과나 오류를 초래할 수 있다.
+
+```python
+middle = left + (right - left) // 2
+```
+
+두 수의 합에서 반을 구하는 대신, 두 수의 차를 반으로 나눈 값을 작은 수에 더하면 오버플로를 피할 수 있다. `right - left`는 항상 `right` 보다 작기 때문에 오버플로를 피할 수 있고, `left`에 `right - left // 2`를 더한 값도 항상 `right`보다 작기 때문에 오버플로를 피할 수 있다.
+
+
+
+## 이진 탐색의 복잡도
+
+### 시간 복잡도
+
+최악의 경우 N개의 요소를 1개의 요소가 될 때까지 범위를 좁혀야한다. 이때 범위를 줄이는 연산이 logn번 반복되므로 O(logn)의 시간 복잡도를 필요로 한다.
+
+예) 탐색 범위 8개 -> 4개 -> 2개 -> 1개로 줄일 때까지 줄이는 횟수 $log_2{8}$=3번 수행되었다.
+
+
+
+## 이진 탐색으로 풀 수 있는 문제들
+
+- 최댓값 중 최솟값, 최솟값 중 최댓값을 찾는 문제들
 
