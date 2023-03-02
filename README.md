@@ -1,11 +1,9 @@
 # algorithms
 내가 공부한 알고리즘
 
-(2022/04/20~2022/07/06)
+`예: 문제_이름.py`는 백준 문제 풀이입니다. 코드 링크가 잘못된 링크로 연결될 경우 [이 레포지토리](https://github.com/leegwae/problem-solving)에서 찾아주세요.
 
-(2022/12/29~)
-
-`예: 문제_이름.py`는 백준 문제 풀이입니다. 코드 링크가 잘못된 링크로 연결될 경우 [이 레포지토리](https://github.com/leegwae/problem-solving)에서 찾아주세요. 
+자료구조는 [이 레포지토리](https://github.com/leegwae/data-structures)에 정리되어있습니다.
 
 ## TOC
 
@@ -31,7 +29,8 @@
 - [LIS](https://github.com/leegwae/algorithms/blob/main/LIS.md)
 - [최단 경로 알고리즘](https://github.com/leegwae/algorithms/blob/main/Shortest%20Path%20Algorithms.md)
   - [다익스트라 알고리즘](https://github.com/leegwae/algorithms/blob/main/Dijkstra%20Algorithm.md)
-  - [플로이드 워셜 알고리즘](https://github.com/leegwae/algorithms/blob/main/Floyd-Warshall%20Algorithm.md)
+  - [플로이드-워셜 알고리즘](https://github.com/leegwae/algorithms/blob/main/Floyd-Warshall%20Algorithm.md)
+  - [벨만-포드 알고리즘](https://github.com/leegwae/algorithms/blob/main/Bellman-Ford%20Algorithm.md)
 - [위상 정렬](https://github.com/leegwae/algorithms/blob/main/Topological%20Sorting.md)
 - [최소 스패닝 트리](https://github.com/leegwae/algorithms/blob/main/Minimum%20Spanning%20Tree.md)
 - [에라토스테네스의 체](https://github.com/leegwae/algorithms/blob/main/Sieve%20of%20Eratosthenes.md)
@@ -47,14 +46,16 @@
 - [ ] 그리디 알고리즘, 분할 정복, 다이나믹 프로그래밍의 차이 정리하기
 - [x] 이분 탐색
 - [x] LIS의 길이-이분탐색으로 구하기
-- [ ] Divide and Conquer
-  - [ ] 퀵 정렬, 병합 정렬 링크
+- [x] Divide and Conquer
+  - [x] 퀵 정렬, 병합 정렬 링크
 - [ ] 이분 탐색으로 LIS 배열 구하기
-- [ ] Sorting Algorithms
-  - [ ] Quick Sort 보충하기
+- [x] Sorting Algorithms
+  - [x] Quick Sort 보충하기
 - [ ] 최단 경로 알고리즘
   - [ ] 벨만 포드
   - [x] 플로이드
+- [ ] 트리의 지름 DFS, BFS
+- [ ] 참고 텍스트 형식 통일하기
 
 
 
@@ -62,13 +63,11 @@
 
 ## 참고
 
-[큰돌-코딩테스트대비](https://blog.naver.com/jhc9639/222283814653)
-
-[라이-대회알고리즘](https://blog.naver.com/kks227/220769859177)
-
-[Heee-알고리즘](https://gmlwjd9405.github.io/tags#algorithm)
-
-박상길-파이썬 알고리즘 인터뷰
-
-구종만-알고리즘 문제 해결 전략
+- [큰돌-코딩테스트대비](https://blog.naver.com/jhc9639/222283814653)
+- [라이-대회알고리즘](https://blog.naver.com/kks227/220769859177)
+- [Heee-알고리즘](https://gmlwjd9405.github.io/tags#algorithm)
+- 박상길-파이썬 알고리즘 인터뷰
+- 구종만-알고리즘 문제 해결 전략
+- 자료구조 강의 필기
+- C언어로 쉽게 풀어쓴 자료구조
 
