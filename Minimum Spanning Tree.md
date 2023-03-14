@@ -58,6 +58,34 @@ def kruskal():
 
 
 
+### 최적화
+
+선택된 간선의 개수가 `N-1`개가 되면 모든 정점이 연결되었으므로 더이상 간선을 찾지 않아도 된다.
+
+```python
+def kruskal():
+	edges = []
+	edges.sort()
+
+	selected = []
+	total = 0
+	for cost, a, b in edges:
+		if find(a) == find(b):
+			continue
+
+		union(a, b)
+		selected.append((a, b))
+		total += cost
+
+		if len(selected) == N - 1:
+			break
+	return selected, total
+```
+
+
+
+
+
 ### 크루스칼 알고리즘의 복잡도
 
 간선의 개수가 `V`, 정점의 개수가 `E`이다.

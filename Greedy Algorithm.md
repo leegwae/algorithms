@@ -54,7 +54,17 @@
 
 ## 탐욕법으로 풀 수 있는 문제들
 
-- A에 연산하여 B를 만드는 문제: B를 A로 만드는 문제로 푼다.
+### 예: A를 B로 만들기
+
+> A와 B가 주어진다. A에 적용할 수 있는 연산이 다음과 같을 때, A를 B로 만드는 최소 연산 횟수를 구하라.
+
+A를 B로 만들기 위해 탐색해야하는 경우의 수가 매우 많다면, B를 A로 만드는 문제로 바꾸어 경우의 수를 좁힐 수 있다.
+
+[예: A와_B.py](https://github.com/leegwae/problem-solving/blob/main/greedy/A%EC%99%80_B.py)
+
+[예: 두_배\_더하기.py](https://github.com/leegwae/problem-solving/blob/main/greedy/%EB%91%90_%EB%B0%B0_%EB%8D%94%ED%95%98%EA%B8%B0.py)
+
+
 
 ### 예: 분할 가능 배낭 문제
 

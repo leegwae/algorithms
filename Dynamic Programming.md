@@ -301,6 +301,8 @@ if __name__ == "__main__":
 
 [예: 평범한_배낭.py](https://github.com/leegwae/problem-solving/blob/main/dp/%ED%8F%89%EB%B2%94%ED%95%9C_%EB%B0%B0%EB%82%AD.py)
 
+이와 달리 짐을 쪼갤 수 있다면 **분할 가능 배낭 문제(Fractional knapsack Problem)**라고 한다. 이 문제는 그리디 알고리즘으로 풀 수 있다.
+
 
 
 ### 예: 동전 문제
