@@ -118,3 +118,20 @@ arr = [[1, 2], [3, 4]]
 sum(arr, [])	# [1, 2, 3, 4]
 ```
 
+
+
+## 2차원 배열을 90도로 돌리기
+
+```python
+def rotate(board):
+	R, C = len(board), len(board[0])
+	return [[board[j][i] for j in range(R-1, -1, -1)] for i in range(C)]
+```
+
+```python
+def rotate(board):
+    return list(zip(*board[::-1]))
+```
+
+*zip 함수는 파라미터로 iterable 객체들을 넘겨받아, 각 인덱스의 요소들을 묶어 튜플로 반환한다.
+

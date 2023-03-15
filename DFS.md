@@ -266,7 +266,7 @@ print(count)
 
 
 
-## 사이클과 DFS
+## 사이클이 있는 그래프에서 DFS
 
 <img src="https://user-images.githubusercontent.com/57662010/165721791-a7fa8853-d7e7-49f6-9689-c605542ce7df.jpg" alt="cycle graph" width="40%" />
 
@@ -342,6 +342,8 @@ def dfs(v):
 
 
 
+## 사이클이 없는 그래프에서 DFS
+
 ### 위상 정렬
 
 **위상 정렬(topological sorting)**이란 의존 관계가 있는 정점들을 순서에 맞게 나열하는 것을 의미한다. 이것은 DAG(directed acylic graph)를 DFS하며 DFS가 끝난 순서대로 정점을 나열한 것과 같다.
@@ -349,3 +351,23 @@ def dfs(v):
 
 
 [알고리즘 위상 정렬 정리](https://github.com/leegwae/algorithms/blob/main/Topological%20Sorting.md) 참고
+
+
+
+## 트리의 지름
+
+트리의 지름은 트리에서 가장 멀리 떨어져있는 두 정점의 거리이다. 이 거리는 두 정점 사이의 간선의 개수와 동일하다. 트리의 지름은 다음과 같이 구할 수 있다.
+
+1. 트리에서 임의의 정점 A를 고르고, A에서 가장 멀리 떨어진 정점 B를 구한다.
+2. B에서 가장 멀리 떨어진 정점 C를 구한다. 이때 B와 C 사이의 거리가 트리의 지름이다.
+
+트리에서 임의의 두 정점 사이의 거리는 DFS나 BFS로 구할 수 있다.
+
+```python
+B, _ = dfs(A)
+C, tree_diameter = dfs(B)
+```
+
+[예: 트리의_지름.py](https://github.com/leegwae/problem-solving/blob/main/graph/dfs/%ED%8A%B8%EB%A6%AC%EC%9D%98_%EC%A7%80%EB%A6%84.py)
+
+[예: 스크루지_민호.py](https://github.com/leegwae/problem-solving/blob/main/graph/bfs/%EC%8A%A4%ED%81%AC%EB%A3%A8%EC%A7%80_%EB%AF%BC%ED%98%B8.py)
