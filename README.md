@@ -8,6 +8,7 @@
 ## TOC
 
 - [etc: 파이썬으로 알고리즘 풀 때](https://github.com/leegwae/algorithms/blob/main/etc.md)
+- [진법 변환하기](https://github.com/leegwae/algorithms/blob/main/Base%20Conversion.md)
 - [정렬 알고리즘](https://github.com/leegwae/algorithms/blob/main/Sorting%20Algorithms.md)
   - [선택 정렬](https://github.com/leegwae/algorithms/blob/main/Selection%20Sort.md)
   - [삽입 정렬](https://github.com/leegwae/algorithms/blob/main/Insertion%20Sort.md)
@@ -32,6 +33,7 @@
   - [플로이드-워셜 알고리즘](https://github.com/leegwae/algorithms/blob/main/Floyd-Warshall%20Algorithm.md)
   - [벨만-포드 알고리즘](https://github.com/leegwae/algorithms/blob/main/Bellman-Ford%20Algorithm.md)
 - [위상 정렬](https://github.com/leegwae/algorithms/blob/main/Topological%20Sorting.md)
+- [외판원 순회](https://github.com/leegwae/algorithms/blob/main/Traveling%20Salesman%20problem.md)
 - [최소 스패닝 트리](https://github.com/leegwae/algorithms/blob/main/Minimum%20Spanning%20Tree.md)
 - [에라토스테네스의 체](https://github.com/leegwae/algorithms/blob/main/Sieve%20of%20Eratosthenes.md)
 
@@ -57,4 +59,5 @@
 - 구종만-알고리즘 문제 해결 전략
 - 자료구조 강의 필기
 - C언어로 쉽게 풀어쓴 자료구조
+- [나동빈-실전 알고리즘 강좌](https://www.youtube.com/watch?v=qQ5iLNjpxSk&list=PLRx0vPvlEmdDHxCvAQS1_6XV4deOwfVrz&ab_channel=%EB%8F%99%EB%B9%88%EB%82%98)
 
