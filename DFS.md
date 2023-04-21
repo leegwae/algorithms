@@ -98,13 +98,13 @@ if visited[w] == 1:				# 정점에 방문했는지 알아보기
 graph = {...}
 visited = [0] * 7
 
-def dfs(v):
-    visited[v] = 1
-    # print(v)
+def dfs(cur):
+    visited[cur] = 1
+    # print(cur)
 
-    for w in graph[v]:
-        if visited[w] == 0:
-            dfs(w)
+    for nxt in graph[cur]:
+        if visited[nxt] == 0:
+            dfs(nxt)
 
 dfs(0)
 ```
@@ -119,17 +119,18 @@ dfs(0)
 graph = {...}
 visited = [0] * 7
 
-def dfs(start_v):
-    stack = [start_v]
-
+def dfs(start):
+    stack = [start]
+    visited[start] = 1
+    
     while stack:
-        v = stack.pop()
-        visited[v] = 1
-        # print(v)
-
-        for w in graph[v]:
-            if visited[w] == 0:
-                stack.append(w)
+        cur = stack.pop()
+        # print(cur)
+        
+        for nxt in graph[cur]:
+            if visited[nxt] == 0:
+                visited[nxt] = 1
+                stack.append(nxt)
 ```
 
 - `[0, 2, 5, 1, 4, 3, 6]`순으로 방문할 것이다.
@@ -161,15 +162,15 @@ DFS는 `재귀`와 `스택(반복)` 구현 외에도 인접 정점 `w`의 방문
 #### 재귀로 구현하기
 
 ```python
-def dfs(v):
-    if visited[v] == 1:
+def dfs(cur):
+    if visited[cur] == 1:
         return
     
-    visited[v] = 1
-    # print(v)
+    visited[cur] = 1
+    # print(cur)
 
-    for w in graph[v]:
-        dfs(w)
+    for nxt in graph[cur]:
+        dfs(nxt)
 ```
 
 
@@ -177,18 +178,18 @@ def dfs(v):
 #### 스택으로 구현하기
 
 ```python
-def dfs(start_v):
-    stack = [start_v]
-    
-    while stack:
-        cur = stack.pop()
-        
-        if visited[cur] == 0:
-            visited[cur] = 1
-            # print(cur)
-            
-            for w in graph[cur]:
-                stack.append(w)
+def dfs(start):
+	stack = [start]
+
+	while stack:
+		cur = stack.pop()
+
+		if visited[cur] == 0:
+			visited[cur] = 1
+			print(cur)
+
+			for nxt in graph[cur]:
+				stack.append(nxt)
 ```
 
 
