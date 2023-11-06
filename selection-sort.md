@@ -25,7 +25,7 @@ def selection_sort(arr):
     for i in range(0, N - 1):
         least = i
         for j in range(i + 1, N):
-            if arr[j] > least:
+            if arr[least] > arr[j]:
                 least = j
         arr[i], arr[least] = arr[least], arr[i]
 ```
