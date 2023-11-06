@@ -116,7 +116,7 @@ def topological_sort() -> Optional[List[int]]:
 
 ### DFS에서 사이클 발견하기
 
-[사이클과 DFS](https://github.com/leegwae/algorithms/blob/main/DFS.md#%EC%82%AC%EC%9D%B4%ED%81%B4%EA%B3%BC-dfs)를 참고한다.
+[사이클과 DFS](https://github.com/leegwae/algorithms/blob/main/dfs.md#%EC%82%AC%EC%9D%B4%ED%81%B4%EA%B3%BC-dfs)를 참고한다.
 
 
 

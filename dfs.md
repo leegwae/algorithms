@@ -351,7 +351,7 @@ def dfs(v):
 
 
 
-[알고리즘 위상 정렬 정리](https://github.com/leegwae/algorithms/blob/main/Topological%20Sorting.md) 참고
+[알고리즘 위상 정렬 정리](https://github.com/leegwae/algorithms/blob/main/sorting-algorithms.md) 참고
 
 
 

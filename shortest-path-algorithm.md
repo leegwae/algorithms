@@ -32,16 +32,16 @@ DFS로 최단 거리를 구할 수 없는 것은 아니다. 다만 모든 경우
 
 ### BFS로 최단 거리 구하기
 
-[BFS.md - 노드의 레벨 구하기 & 두 노드 사이의 최단거리 구하기](https://github.com/leegwae/algorithms/blob/main/BFS.md#%EB%85%B8%EB%93%9C%EC%9D%98-%EB%A0%88%EB%B2%A8-%EA%B5%AC%ED%95%98%EA%B8%B0) 참고
+[BFS.md - 노드의 레벨 구하기 & 두 노드 사이의 최단거리 구하기](https://github.com/leegwae/algorithms/blob/main/bfs.md#%EB%85%B8%EB%93%9C%EC%9D%98-%EB%A0%88%EB%B2%A8-%EA%B5%AC%ED%95%98%EA%B8%B0) 참고
 
 ### 다익스트라 알고리즘으로 최단 거리 구하기
 
-[알고리즘 정리 - 다익스트라 알고리즘](https://github.com/leegwae/algorithms/blob/main/Dijkstra%20Algorithm.md) 참고
+[알고리즘 정리 - 다익스트라 알고리즘](https://github.com/leegwae/algorithms/blob/main/dijkstra-algorithm.md) 참고
 
 ### 플로이드 워셜 알고리즘으로 최단 거리 구하기
 
-[알고리즘 정리 - 플로이드 워셜 알고리즘](https://github.com/leegwae/algorithms/blob/main/Floyd-Warshall%20Algorithm.md) 참고
+[알고리즘 정리 - 플로이드 워셜 알고리즘](https://github.com/leegwae/algorithms/blob/main/floyd-warshall-algorithm.md) 참고
 
 ### 벨만-포드 알고리즘으로 최단 거리 구하기
 
-[알고리즘 정리 - 벨만-포드 알고리즘](https://github.com/leegwae/algorithms/blob/main/Bellman-Ford%20Algorithm.md) 참고
+[알고리즘 정리 - 벨만-포드 알고리즘](https://github.com/leegwae/algorithms/blob/main/bellman-ford-algorithm.md) 참고

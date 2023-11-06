@@ -2,7 +2,7 @@
 
 **벨만-포드 알고리즘(Bellman-Ford Algorithm)**은 <u>음수 간선이 있는 그래프</u>에서도 사용할 수 있는 단일 시작점 최단 거리 알고리즘이다.
 
-[다익스트라와 음수 간선이 있는 그래프](https://github.com/leegwae/algorithms/blob/main/Dijkstra%20Algorithm.md#다익스트라와-음수-간선이-있는-그래프)와 같은 경우에서 볼 수 있듯이, 음수 간선이 포함되는 경로에 대해서도 탐색이 필요하다. 따라서 벨만 포드는 그래프의 모든 간선을 탐색하여 최단 경로를 구하고자 한다.
+[다익스트라와 음수 간선이 있는 그래프](https://github.com/leegwae/algorithms/blob/main/dijkstra-algorithm.md#다익스트라와-음수-간선이-있는-그래프)와 같은 경우에서 볼 수 있듯이, 음수 간선이 포함되는 경로에 대해서도 탐색이 필요하다. 따라서 벨만 포드는 그래프의 모든 간선을 탐색하여 최단 경로를 구하고자 한다.
 
 
 

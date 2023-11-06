@@ -36,7 +36,7 @@ def f(x):
 
 문제의 가장 좋은 해결 방법이 부분 문제들의 가장 좋은 해결 방법으로 구성된 것을 뜻한다.
 
-[다이나믹 프로그래밍 - 최적 부분 구조](https://github.com/leegwae/algorithms/blob/main/Dynamic%20Programming.md#%EC%B5%9C%EC%A0%81-%EB%B6%80%EB%B6%84-%EA%B5%AC%EC%A1%B0) 참고
+[알고리즘 다이나믹 프로그래밍 - 최적 부분 구조](https://github.com/leegwae/algorithms/blob/main/dynamic-programming.md#%EC%B5%9C%EC%A0%81-%EB%B6%80%EB%B6%84-%EA%B5%AC%EC%A1%B0) 참고
 
 
 
@@ -44,19 +44,19 @@ def f(x):
 
 ### 예: 퀵 정렬
 
-[퀵 정렬](https://github.com/leegwae/algorithms/blob/main/Quick%20Sort.md) 참고
+[알고리즘 퀵 정렬](https://github.com/leegwae/algorithms/blob/main/quick-sort.md) 참고
 
 
 
 ### 예: 병합 정렬
 
-[병합 정렬](https://github.com/leegwae/algorithms/blob/main/Merge%20Sort.md) 참고
+[병합 정렬](https://github.com/leegwae/algorithms/blob/main/merge-sort.md) 참고
 
 
 
 ### 예: 이진 탐색
 
-[이진 탐색](https://github.com/leegwae/algorithms/blob/main/Binary%20Search.md) 참고
+[이진 탐색](https://github.com/leegwae/algorithms/blob/main/binary-search.md) 참고
 
 
 

@@ -9,12 +9,12 @@
 
 그래프 탐색에는 두가지 방법이 있다.
 
-- [DFS(depth-first search)](https://github.com/leegwae/algorithms/blob/main/DFS.md): `깊이 우선 탐색`
-- [BFS(breadth-first search)](https://github.com/leegwae/algorithms/blob/main/BFS.md): `너비 우선 탐색`
+- [DFS(depth-first search)](https://github.com/leegwae/algorithms/blob/main/dfs.md): `깊이 우선 탐색`
+- [BFS(breadth-first search)](https://github.com/leegwae/algorithms/blob/main/bfs.md): `너비 우선 탐색`
 
 
 
 ## 참고할 만한 것
 
-- 자료구조 [그래프(Graph)](https://github.com/leegwae/data-structures/blob/main/Graph.md)란 무엇인가
+- 자료구조 [그래프(Graph)](https://github.com/leegwae/data-structures/blob/main/graph.md)란 무엇인가
 

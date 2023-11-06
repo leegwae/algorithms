@@ -1,6 +1,6 @@
 # Heap Sort
 
-- **힙 정렬(Heap Sort)**은 [힙 자료구조](https://github.com/leegwae/data-structures/blob/main/Heap.md)를 사용하여 데이터를 정렬하는 정렬 알고리즘이다.
+- **힙 정렬(Heap Sort)**은 [자료구조 힙](https://github.com/leegwae/data-structures/blob/main/heap.md)를 사용하여 데이터를 정렬하는 정렬 알고리즘이다.
 
 
 

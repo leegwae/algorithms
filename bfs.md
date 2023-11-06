@@ -31,7 +31,7 @@ BFS는 DFS와 달리 `재귀`로 구현할 수 없다. 큰 단위의 문제를 �
 
 ### 준비
 
-[DFS의 구현 - 준비](https://github.com/leegwae/algorithms/blob/main/DFS.md#%EC%A4%80%EB%B9%84) 참고
+[DFS의 구현 - 준비](https://github.com/leegwae/algorithms/blob/main/dfs.md#%EC%A4%80%EB%B9%84) 참고
 
 
 

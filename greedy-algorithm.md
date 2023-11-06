@@ -24,7 +24,7 @@
 
 문제의 가장 좋은 해결 방법이 부분 문제의 가장 좋은 해결 방법으로 구성된 것을 뜻한다.
 
-[다이나믹 프로그래밍 - 최적 부분 구조](https://github.com/leegwae/algorithms/blob/main/Dynamic%20Programming.md#%EC%B5%9C%EC%A0%81-%EB%B6%80%EB%B6%84-%EA%B5%AC%EC%A1%B0) 참고
+[다이나믹 프로그래밍 - 최적 부분 구조](https://github.com/leegwae/algorithms/blob/main/dynamic-programming.md#%EC%B5%9C%EC%A0%81-%EB%B6%80%EB%B6%84-%EA%B5%AC%EC%A1%B0) 참고
 
 
 

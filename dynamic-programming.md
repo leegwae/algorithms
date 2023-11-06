@@ -134,7 +134,7 @@ $$
 
 ### 2. 동적 계획법을 적용할 수 있는 문제인지 확인하기
 
-동적 계획법을 적용할 수 있는 문제는 [다음](https://github.com/leegwae/algorithms/blob/main/Dynamic%20Programming.md#%EB%8F%99%EC%A0%81-%EA%B3%84%ED%9A%8D%EB%B2%95%EC%9D%84-%EC%A0%81%EC%9A%A9%ED%95%A0-%EC%88%98-%EC%9E%88%EB%8A%94-%EB%AC%B8%EC%A0%9C%EB%93%A4)과 같은 조건을 만족해야한다.
+동적 계획법을 적용할 수 있는 문제는 [다음](https://github.com/leegwae/algorithms/blob/main/dynamic-programming.md#%EB%8F%99%EC%A0%81-%EA%B3%84%ED%9A%8D%EB%B2%95%EC%9D%84-%EC%A0%81%EC%9A%A9%ED%95%A0-%EC%88%98-%EC%9E%88%EB%8A%94-%EB%AC%B8%EC%A0%9C%EB%93%A4)과 같은 조건을 만족해야한다.
 
 1. 최적 부분 구조를 가져야 한다.
 2. 중복되는 부분 문제를 가져야한다.

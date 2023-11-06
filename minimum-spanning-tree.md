@@ -29,7 +29,7 @@
 ### 크루스칼 알고리즘의 구현
 
 1. DFS/BFS 사용하기: 간선을 트리에 더할 때마다 그래프를 순회하여 사이클이 있는지 확인한다.
-2. [Union-Find](https://github.com/leegwae/data-structures/blob/main/Union-Find.md) 사용하기: 간선을 이루는 두 정점이 같은 컴포넌트에 속하는지 확인한다. (같은 컴포넌트에 속한다면 사이클이 있다.)
+2. [Union-Find](https://github.com/leegwae/data-structures/blob/main/union-find.md) 사용하기: 간선을 이루는 두 정점이 같은 컴포넌트에 속하는지 확인한다. (같은 컴포넌트에 속한다면 사이클이 있다.)
 
 #### union-find 사용하기
 

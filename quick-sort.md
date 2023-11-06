@@ -1,6 +1,6 @@
 # Quick Sort
 
-- **퀵 소트(Quick Sort)**: [분할 정복](https://github.com/leegwae/algorithms/blob/main/Divide%20and%20Conquer.md) 기법을 사용하여, 선택한 피벗을 기준으로 배열을 두 개의 비균등한 배열로 나누어 각 부분 배열을 다시 퀵 정렬한다.
+- **퀵 소트(Quick Sort)**: [분할 정복](https://github.com/leegwae/algorithms/blob/main/divide-and-conquer.md) 기법을 사용하여, 선택한 피벗을 기준으로 배열을 두 개의 비균등한 배열로 나누어 각 부분 배열을 다시 퀵 정렬한다.
 
 
 
@@ -152,15 +152,10 @@ def quick_sort(left, right):
 ## 퀵 정렬의 특징
 
 - 장점
-
   - 평균적으로 가장 빠르다.
-
   - 제자리 정렬이다.
-
 - 단점
-
   - 불안정 정렬이다.
-
   - 이미 정렬된 배열에 대해서 비효율적이다.
 
 
